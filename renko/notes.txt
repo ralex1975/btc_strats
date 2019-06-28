@@ -1,0 +1,17 @@
+Could possibly use two different methods-
+
+1: Use the high value to create the signal
+2: Use the close value to create the signal and then look up the price at that time for the backtest
+    - would the value new threshold values we calculate be based on the close or based on the old threshold values? May
+    require two methods here as well for backtesting
+
+Create a series of time-agnostic bars that are only concerned with the price movement of the underlying. We take the
+starting value block size and draw the first block once the price has moved above or below the threshold values.
+
+Record the open and close prices of the bars along with a timestamp of the bars close?
+
+Later on, how could we use the length of time or velocity of the trend as useful information?
+
+How could this be used in production without calculating the entire bar series every time? We would need to know the
+threshold values from the previous time period.
+
